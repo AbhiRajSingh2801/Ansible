@@ -1,0 +1,50 @@
+# In Yaml we stored data in form of Key Value pair, Array, dictionary example to provide an Array
+
+#below is an example of keyvalue pair
+Fruit: Apple
+Vege: tomato
+icrecream: strawberry
+
+# Below example of Array
+Fruit:
+- Apple
+- Bannana
+- pineapple
+
+# Below example of dictonary
+Fruit:
+ Apple: Red
+ Bannana: yellow
+ pineapple: green
+
+# Below example of dictonary inside the dictionary
+Fruit:
+  Apple:
+    Pure red apple:
+     price: 150
+     quntity: 1kg 
+  Normal Apple price: 100
+  quantity: 1kg
+ Bannana: yellow
+  price: 50
+  quantity: 1 dozen
+ pineapple: green
+  price: 80
+  quantity: 1
+
+  #Below example is a list of array "-"sign is represent the array
+
+  Fruits:
+          -
+          name: Apple
+          price: 50 
+          qunatity: kg
+          -
+          name: Banana
+          price: 30
+          quantity: dozen
+          -
+          name: pinepapple
+          price: 80
+          quantity: no of pieces
+#Note when two files are same attributes but different in order known as unordered collection
