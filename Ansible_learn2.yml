@@ -1,1 +1,13 @@
-Anisble bygaurav sharma 
+#for stability ansible use in windows --> winrm
+#for stability ansible use in Linux --> ssh
+#all the required details like ip, dns, ssh, port, username, passwords are stored in inventory file. Inventory file is presist 
+#in ini, yaml format
+#ansible default inventory file is present in /etc/ansible/hosts
+#by default ansible username taken as root and connect type is ssh
+# need to install sshpass utility
+#host_key_checking should be false in ansible configuration file /etc/ansible/ansible.cfg
+#command to read our customize enventory file are below:
+#ansible webserver -m ping -i inventory.txt  --> webserver is alias, -m stands for module, -i to iterate customize file like example
+#Example                                                                                                                  (command to execute)for all(ansible all -m ping -i inventory.txt)
+#webserver ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+#sqlserver ansible_host=hostip(192.168..2) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible sqlserver -m ping -i inventory.txt)

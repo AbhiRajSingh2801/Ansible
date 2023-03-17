@@ -1,0 +1,2 @@
+webserver ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+sqlserver ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible sqlserver -m ping -i inventory.txt)

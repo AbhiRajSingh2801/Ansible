@@ -1,0 +1,29 @@
+Run command to execute "ansible sqlservers -m ping -i group_inventory.txt"
+this example is used when n number of hostmachine to configuration of hosts
+
+sqlserver1 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+webserver1 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+sqlserver2 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+webserver2 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+webserver3 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+sqlserver3 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+webserver4 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+sqlserver4 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+webserver5 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+sqlserver5 ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+appserver ansible_host=hostip(192.168..1) ansible_ssh_pass=password ansible_connection ansible_port=22 ansible_user=root (ansible webserver -m ping -i inventory.txt)
+
+[sqlservers]
+sqlserver1
+sqlserver2
+sqlserver3
+sqlserver4
+sqlserver5
+
+[webservers]
+webserver1
+appserver
+webserver2
+webserver3
+webserver4
+webserver5
