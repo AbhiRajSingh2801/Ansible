@@ -1,0 +1,49 @@
+# First Playbook 
+# to execute the playbook write command == ansible-playbook playbookname.yml -i inventoryname
+#Dictonary formaat are unordered collection and array is ordered collection
+#this is first playbook command == ansible-playbook playbookname.yml -i inventoryname output = execute on webserver
+-
+  name: first Playbook
+  hosts: webserver1 #here we defined the server name which we defined in inventory file
+  tasks: 
+    -
+      name: "create a dummy file"
+      command: touch /tmp/usr/a.txt
+
+
+#this is 2nd playbook command == ansible-playbook playbookname.yml -i group_inventory.txt output = execute on webserveranddbservers 
+-
+  name: first Playbook
+  hosts: databaseandwebservers #here we defined the server name which we defined in inventory file
+  tasks: 
+    -
+      name: "create a dummy file"
+      command: touch /tmp/usr/a.txt
+
+#multiple task using playbook
+-
+  name: first Playbook
+  hosts: databaseandwebservers #here we defined the server name which we defined in inventory file
+  tasks: 
+    -
+      name: "create a dummy folder"
+      command: mkdir /tmp/usr/abhi     
+    -
+      name: "create a dummy file"
+      command: touch /tmp/usr/abhi/a.txt   
+
+#multiple command and multiple playbook in one
+-
+  name: first Playbook
+  hosts: databaseandwebservers #here we defined the server name which we defined in inventory file
+  tasks: 
+    -
+      name: "create a dummy file"
+      command: touch /tmp/usr/a.txt
+-
+  name: first Playbook
+  hosts: webserver1 #here we defined the server name which we defined in inventory file
+  tasks: 
+    -
+      name: "create a dummy file"
+      command: touch /tmp/usr/a.txt
