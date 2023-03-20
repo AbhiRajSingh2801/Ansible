@@ -27,3 +27,7 @@ webserver2
 webserver3
 webserver4
 webserver5
+
+[databaseandwebservers]
+webserver1
+sqlserver1
