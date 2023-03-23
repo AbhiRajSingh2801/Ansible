@@ -1,0 +1,8 @@
+#Ansible is idempotent language like if the thing is already present so it can be changed
+#tHis is an example of lininfile
+      name: this is module to copy file into target machine particular user
+      host: webserver1
+      task:
+        -
+          name: copy created dummy file in target machine into particular user
+          lineinfile: path=/tmp/text.txt line="abhishek kushwah"
