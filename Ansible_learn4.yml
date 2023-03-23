@@ -1,0 +1,33 @@
+#Modules
+#test.yml file are present inside the controller machine
+-
+      name: this is out first module play
+      host: webserver1
+      task:
+        -
+          name: "copy created dummy file in target machine"
+          copy: src=test.yml dest=/tmp/
+
+#if module is are defined to particular user group mode then we can write yaml file below:
+
+-     
+      name: this is module to copy file into target machine particular user
+      hsot: webserver1
+      task:
+        -
+          name: "copy created dummy file in target machine into particular user"
+          copy: src=filename dest:/tml/ owner= abhi group=dev mode=0644(permission)
+
+#another way to write 
+-     
+      name: this is module to copy file into target machine particular user
+      hsot: webserver1
+      task:
+        -
+          name: "copy created dummy file in target machine into particular user"
+          copy: 
+            src=filename 
+            dest:/tml/ 
+            owner= abhi 
+            group=dev 
+            mode=0644(permission)
