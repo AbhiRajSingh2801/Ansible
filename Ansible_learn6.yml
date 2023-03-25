@@ -1,0 +1,9 @@
+#Script Module
+#if we are give anything in creates and that are present in the folder script is not executed 
+
+      name: this is module to copy file into target machine particular user
+      host: webserver1
+      task:
+        -
+          name: copy created dummy file in target machine into particular user
+          script: basic_script.sh abhishek kushwah creates=/tmp/text.txt
