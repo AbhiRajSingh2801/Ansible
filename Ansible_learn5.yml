@@ -1,5 +1,5 @@
-#Ansible is idempotent language like if the thing is already present so it can be changed
-#tHis is an example of lininfile
+#Ansible  have module lineinfile is idempotent like if the thing is already present so it can be changed
+#tHis is an example of lineinfile
       name: this is module to copy file into target machine particular user
       host: webserver1
       task:
